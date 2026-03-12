@@ -3,5 +3,5 @@ services:
     image: phutawan2548/docker-deploy-frontend-v2:latest
     pull_policy: always
     ports:
-      - "8081:8080"
+      - "8090:8080"
     restart: unless-stopped
