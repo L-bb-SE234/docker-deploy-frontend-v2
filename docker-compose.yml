@@ -1,7 +1,10 @@
 services:
   frontend:
-    image: phutawan2548/docker-deploy-frontend-v2:latest
+    image: phutawan2548/234-deploylab-frontend:latest
     pull_policy: always
     ports:
-      - "8090:8080"
+      - "8090:80"
+    environment:
+      - VITE_GRAPHQL_URI=http://<IP_VM>:8082/graphql
+      - VITE_SERVER_URI=http://<IP_VM>:8082
     restart: unless-stopped
